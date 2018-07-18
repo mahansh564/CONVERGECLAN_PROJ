@@ -484,6 +484,10 @@ ul {
     text-align: center;
   width: 100%;
   margin-top: calc((100% - 78px) / 1.8);
+  font-size: 3.3rem;
+    text-align: center;
+    width: 100%;
+    
  
 }
 .contentmain > h1{
@@ -492,6 +496,10 @@ ul {
 .content_loader{
   position: absolute;
   top:0;
+}
+.typed-cursor{
+  animation: blink 2s infinite;
+  opacity: 1;
 }
 @keyframes blink{
   0%{opacity:0;}

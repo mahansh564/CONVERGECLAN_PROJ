@@ -35,20 +35,23 @@
     </div>
   </div>
 </div>
-<div class="load_content"><h1 class="load_heading"></h1></div>
+<div style="font-size: 3.3rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 450px;" class="load_content"><span class="load_heading"></span><span style="font-size: 3.3rem; animation: blink 2s infinite;" class="typed-cursor">|</span></div>
 </div>
 <!-- <div class="content_main"> -->
 	<h1 style="display: none;" class="contentmain">STARK INDUSTRIES</h1>
 <!-- </div> -->
 <script src = "js/lib/typed.min.js"></script>
-	<script>
+	<script type="text/javascript">
 		var typed = new Typed(".load_heading", {
   strings: ["INITIALISING J.A.R.V.I.S","LAUNCHING F.R.I.D.A.Y","PACKING HULKBUSTER","CONTACTING IRON MAN","GETTING THINGS READY..."],
   typeSpeed:50,
   startDelay: 500,
   backSpeed:40,
   showCursor: false,// Default value
-  callback: function() {loadfinished()},
+  callback: function() {loadfinished();},
 });
 
 		function loadfinished(){
