@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="css/index1.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-<div id="arc_container">
+
+<div id="arc_container" class="content_loader">
   <div class="arc_reactor">
     <div class="case_container">
       <div class="e7">
@@ -33,7 +35,33 @@
     </div>
   </div>
 </div>
-<h1 class="load_heading">STARK INDUSTRIES</h1>
+<div class="load_content"><h1 class="load_heading"></h1></div>
+</div>
+<!-- <div class="content_main"> -->
+	<h1 style="display: none;" class="contentmain">STARK INDUSTRIES</h1>
+<!-- </div> -->
+<script src = "js/lib/typed.min.js"></script>
+	<script>
+		var typed = new Typed(".load_heading", {
+  strings: ["INITIALISING J.A.R.V.I.S","LAUNCHING F.R.I.D.A.Y","PACKING HULKBUSTER","CONTACTING IRON MAN","GETTING THINGS READY..."],
+  typeSpeed:50,
+  startDelay: 500,
+  backSpeed:40,
+  showCursor: false,// Default value
+  callback: function() {loadfinished()},
+});
+
+		function loadfinished(){
+			var loader = getElementsByClassName("content_loader");
+			var main = getElementsByClassName("content_main");
+			var myVar = setTimeout(showPage, 5000);
+			function showPage() {
+			  loader.style.display = "none";
+			  main.style.display = "block";
+			  
+			}
+		}
+	</script>
 </body>
 </html>
 
