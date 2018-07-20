@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/index1.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/index.css" media="none" onload="this.media='all';">
+  <style type="text/css">
+    @font-face {
+  font-family: "Arciform";
+  src: url("../public/fonts/Arciform.otf"); }
+  @font-face{
+    font-family: "LemonMilk";
+    src: url("public/fonts/LemonMilk.otf");
+}
+/*  @font-face{
+    font-family: "Sparkles";
+    src: url("../public/fonts/Sparkles.otf");
+}*/
+@font-face{
+  font-family:"ProductSansRegular";
+  src:url("public/fonts/ProductSansRegular.ttf");
+  }
+  @font-face{
+  font-family:"Oxin";
+  src:url("public/fonts/Oxin.ttf");
+  }
+    @font-face{
+  font-family:"Coalition";
+  src:url("public/fonts/Coalition.ttf");
+  }
+  </style>
 </head>
-<body>
+<body onload="myfunction()">
 
-<div id="arc_container" class="content_loader">
+<div id="arc_container" class="content_loader down animated">
   <div class="arc_reactor">
     <div class="case_container">
       <div class="e7">
@@ -20,7 +44,7 @@
         <div class="core2"></div>
       </div>
       <ul class="marks">
-      	<!-- jugaad begins -->
+        <!-- jugaad begins -->
         <li></li><li></li><li></li><li></li><li></li><li></li>
         <li></li><li></li><li></li><li></li><li></li><li></li>
         <li></li><li></li><li></li><li></li><li></li><li></li>
@@ -34,37 +58,45 @@
       </ul>
     </div>
   </div>
+
+<div style="font-size: 3.3rem;    text-align: center;    width: 100%;    margin-top: 450px;" class="load_content down animated" id="load_content"><span class="load_heading"></span><span style="font-size: 3.3rem; animation: blink 2s infinite;" class="typed-cursor">|</span></div>
 </div>
-<div style="font-size: 3.3rem;
-    text-align: center;
-    width: 100%;
-    margin-top: 450px;" class="load_content"><span class="load_heading"></span><span style="font-size: 3.3rem; animation: blink 2s infinite;" class="typed-cursor">|</span></div>
 </div>
-<!-- <div class="content_main"> -->
-	<h1 style="display: none;" class="contentmain">STARK INDUSTRIES</h1>
-<!-- </div> -->
+<div class="contentmain animated flash" id="main">
+  <h1 class="inihead">STARK<br> <span class="inline">INDUSTRIES<span></h1>
+    <h1 class="inihead">STARK<br> <span class="inline">INDUSTRIES<span></h1>
+      <h1 class="inihead">STARK<br> <span class="inline">INDUSTRIES<span></h1>
+</div>
 <script src = "js/lib/typed.min.js"></script>
-	<script type="text/javascript">
-		var typed = new Typed(".load_heading", {
-  strings: ["INITIALISING J.A.R.V.I.S","LAUNCHING F.R.I.D.A.Y","PACKING HULKBUSTER","CONTACTING IRON MAN","GETTING THINGS READY..."],
+  <script type="text/javascript">
+    
+    var myVar;
+    var myVar2;
+    var loader = getElementById("arc_container");
+        var main = getElementById("main");
+    function myfunction() {
+        myVar = setTimeout(hidePage, 18500);
+        
+    }
+    function hidePage() {
+        document.getElementById("arc_container").style.cssText = "display:none !important;";
+        document.getElementById("load_content").style.cssText = "display:none !important;";
+              myVar2 = setTimeout(showPage, 2000);
+    }
+    function showPage(){
+      document.getElementById("main").style.cssText = "display:block;";
+    }
+  </script>
+  <script type="text/javascript">
+    var typed = new Typed(".load_heading", {
+  strings: ["INITIALISING J.A.R.V.I.S","LAUNCHING F.R.I.D.A.Y","PACKING HULKBUSTER","CONTACTING IRON MAN","GETTING THINGS READY"],
   typeSpeed:50,
   startDelay: 500,
   backSpeed:40,
   showCursor: false,// Default value
-  callback: function() {loadfinished();},
+  
 });
+  </script>
 
-		function loadfinished(){
-			var loader = getElementsByClassName("content_loader");
-			var main = getElementsByClassName("content_main");
-			var myVar = setTimeout(showPage, 5000);
-			function showPage() {
-			  loader.style.display = "none";
-			  main.style.display = "block";
-			  
-			}
-		}
-	</script>
 </body>
 </html>
-
